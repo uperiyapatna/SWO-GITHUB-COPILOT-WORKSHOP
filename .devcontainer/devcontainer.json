@@ -1,0 +1,49 @@
+{
+  "name": "C# (.NET)",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "VARIANT": "7.0"
+    }
+  },
+
+  "hostRequirements": {
+    "cpus": 4
+  },
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 1000
+      },
+      "extensions": [
+        "ms-dotnettools.vscode-dotnet-runtime",
+        "ms-dotnettools.csharp",
+        "ms-vscode.powershell",
+        "humao.rest-client",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-dotnettools.csdevkit",
+        "github.vscode-github-actions"
+      ]
+    }
+  },
+
+  "forwardPorts": [1903],
+
+  "portsAttributes": {
+    "1903": {
+      "protocol": "https"
+    }
+  },
+
+  "remoteUser": "vscode",
+  "features": {
+    "docker-in-docker": "latest",
+    "kubectl-helm-minikube": "latest",
+    "azure-cli": "latest"
+  },
+
+  "postCreateCommand": "dotnet dev-certs https"
+}

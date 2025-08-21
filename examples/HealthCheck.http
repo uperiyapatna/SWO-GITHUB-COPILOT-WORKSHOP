@@ -1,0 +1,2 @@
+### Health Check
+GET https://localhost:1903/api/health
