@@ -26,4 +26,4 @@ Remember, GitHub Copilot is a tool designed to assist you, but it doesn’t repl
 
 ---
 > [!IMPORTANT]
-> Labs instructions can be found [here](labs).
+> Labs instructions can be found [here](labs)..
